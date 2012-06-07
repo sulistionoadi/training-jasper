@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <SimpanNasabahRequest>
+        <Nasabah>
+            <nomor>123</nomor>
+            <nama>Endy Muhardin</nama>
+            <email>endy@artivisi.com</email>
+            <daftarNomerTelepon>
+                <nomerTelepon>123</nomerTelepon>
+                <nomerTelepon>456</nomerTelepon>
+                <nomerTelepon>789</nomerTelepon>
+            </daftarNomerTelepon>
+        </Nasabah>
+    </SimpanNasabahRequest>
+</root>

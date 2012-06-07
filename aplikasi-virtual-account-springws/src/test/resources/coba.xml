@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<CariNasabahResponse
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns='http://artivisi.com/virtualaccount'
+    xsi:schemaLocation='
+    http://artivisi.com/virtualaccount 
+    file:/home/endy/workspace/git-clones/training-spring-hibernate-2012-01/aplikasi-virtual-account-springws/src/main/resources/virtualaccount.xsd'>
+    
+    <JumlahData>100</JumlahData>
+    <Mulai>10</Mulai>
+    <Sampai>20</Sampai>
+    <DaftarNasabah>
+        <Nasabah>
+            
+        </Nasabah>
+    </DaftarNasabah>
+    
+</CariNasabahResponse>

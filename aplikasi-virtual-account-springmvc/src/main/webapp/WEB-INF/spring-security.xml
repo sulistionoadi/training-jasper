@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+               
+
+    <http auto-config="true">
+        <intercept-url pattern="/aplikasi/nasabah/form*" access="ROLE_ADMIN" />
+        <intercept-url pattern="/aplikasi/nasabah/delete*" access="ROLE_ADMIN" />
+        <intercept-url pattern="/aplikasi/**" access="ROLE_USER" />
+        <form-login default-target-url="/aplikasi/nasabah/list" />
+    </http>
+    
+    <authentication-manager>
+        <authentication-provider>
+            <user-service>
+                <user name="endy" password="123" authorities="ROLE_USER, ROLE_ADMIN" />
+                <user name="adi" password="123" authorities="ROLE_USER" />
+            </user-service>
+        </authentication-provider>
+        
+        <authentication-provider user-service-ref='myUserDetailsService'>
+            <password-encoder hash="md5">
+                <salt-source user-property="username"/>
+            </password-encoder>
+        </authentication-provider>
+    </authentication-manager>
+    
+    <beans:bean id="myUserDetailsService"
+                class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
+        <beans:property name="dataSource" ref="dataSource"/>
+        <beans:property name="usersByUsernameQuery" 
+        value="select username, password, 'true' as enabled from user_login where username=?" />
+        <beans:property name="authoritiesByUsernameQuery" 
+        value="select username,role as authority from user_role where username = ?" />
+    </beans:bean>
+               
+</beans:beans>

@@ -1,0 +1,11 @@
+
+
+DAFTAR NASABAH BANK
+
+Tanggal Cetak $tanggal
+
+Nomer          Nama               Email            Tanggal Lahir
+================================================================================
+#foreach($data in $listData)
+$data.nomer $data.nama $data.email $data.tanggalLahir
+#end

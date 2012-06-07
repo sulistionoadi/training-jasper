@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <CariNasabahRequest></CariNasabahRequest>
+    
+    <CariNasabahResponse>
+        <JumlahData>1000</JumlahData>
+        <Mulai>100</Mulai>
+        <Sampai>200</Sampai>
+        <DaftarNasabah>
+            <Nasabah>
+                <nomor>123</nomor>
+                <nama>Endy Muhardin</nama>
+                <email>endy@artivisi.com</email>
+                <daftarNomerTelepon>
+                    <nomerTelepon>123</nomerTelepon>
+                    <nomerTelepon>456</nomerTelepon>
+                    <nomerTelepon>789</nomerTelepon>
+                </daftarNomerTelepon>
+            </Nasabah>
+            <Nasabah>
+                <nomor>123</nomor>
+                <nama>Endy Muhardin</nama>
+                <email>endy@artivisi.com</email>
+                <daftarNomerTelepon>
+                    <nomerTelepon>123</nomerTelepon>
+                    <nomerTelepon>456</nomerTelepon>
+                    <nomerTelepon>789</nomerTelepon>
+                </daftarNomerTelepon>
+            </Nasabah>
+        </DaftarNasabah>
+    </CariNasabahResponse>
+</root>
